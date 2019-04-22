@@ -2,11 +2,10 @@ language: java
 script:
 - echo $HOME
 - echo `pwd`
-- echo $DOCKER_PASSWORD
-- echo "$DOCKER_PASSWORD"
-#- cp $HOME/.m2/repository/io/swagger/swagger-spring/1.0.0/swagger-spring-1.0.0.jar .
-#- ls /home/travis/build/agarwalgarima90/spring
-#- docker build -t gagarwal90/myapp:v2 .
-#- docker image list
-#- docker push gagarwal90/myapp:v2
-#- docker run -p 8080:8080 gagarwal90/myapp:v2
+- cp $HOME/.m2/repository/io/swagger/swagger-spring/1.0.0/swagger-spring-1.0.0.jar .
+- ls /home/travis/build/agarwalgarima90/spring
+- docker build -t gagarwal90/myapp:v2 .
+- docker image list
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+- docker push gagarwal90/myapp:v2
+- docker run -p 8080:8080 gagarwal90/myapp:v2
