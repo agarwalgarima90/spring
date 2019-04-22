@@ -11,6 +11,8 @@ run:
 
 run2: docker
 	sudo docker run -p 8080:8080 myorg/myapp  "-Dserver.port=9000"
+#run2: docker
+#	sudo docker run -p 8080:8080 myorg/myapp  "-Dserver.port=9000"
 
 
 localhost-curl:
