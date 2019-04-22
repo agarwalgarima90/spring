@@ -10,6 +10,7 @@ script:
 - echo "Sleeping for 5 sec"; sleep 5
 - echo "Woke up from sleep"
 - docker ps
+- whoami
 - iptables -L
 - ./integrationTestSuite.sh
 #- "curl -X GET --header 'Accept: application/json' 'http://127.0.0.1:8080/v2/ping'"
