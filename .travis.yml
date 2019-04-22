@@ -4,5 +4,5 @@ script:
 - echo `pwd`
 - cp $HOME/.m2/repository/io/swagger/swagger-spring/1.0.0/swagger-spring-1.0.0.jar .
 - ls /home/travis/build/agarwalgarima90/spring
-#- docker build -t gagarwal90/myapp:v2 .
-#- docker image list
+- docker build -t gagarwal90/myapp:v2 .
+- docker image list
