@@ -1,5 +1,5 @@
 language: java
 script:
 - echo $HOME
-- sudo docker build -t gagarwal90/myapp:v2
-- sudo docker image list
+- docker build -t gagarwal90/myapp:v2
+- docker image list
