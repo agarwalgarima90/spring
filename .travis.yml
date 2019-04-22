@@ -2,5 +2,6 @@ language: java
 script:
 - echo $HOME
 - echo `pwd`
+- ls /home/travis/build/agarwalgarima90/spring
 #- docker build -t gagarwal90/myapp:v2 .
 #- docker image list
