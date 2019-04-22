@@ -2,8 +2,14 @@ language: java
 script:
 - echo $HOME
 - echo `pwd`
-- cp $HOME/.m2/repository/io/swagger/swagger-spring/1.0.0/swagger-spring-1.0.0.jar .
-- ls /home/travis/build/agarwalgarima90/spring
-- docker build -t gagarwal90/myapp:v2 .
-- docker image list
-- docker push gagarwal90/myapp:v2
+- echo "$DOCKER_PASSWORD"
+#- cp $HOME/.m2/repository/io/swagger/swagger-spring/1.0.0/swagger-spring-1.0.0.jar
+  .
+#- ls /home/travis/build/agarwalgarima90/spring
+#- docker build -t gagarwal90/myapp:v2 .
+#- docker image list
+#- docker push gagarwal90/myapp:v2
+#- docker run -p 8080:8080 gagarwal90/myapp:v2
+env:
+  matrix:
+    secure: E+l4Sxb9Rg7/vi07f6LPNqIy7GUXx+vWuXnL1WS2YnFPn1IR7MPtGmrLqOfswjQmVQpwXfV4QbZhJeZBu1l0G/d1FVuqH7AcOvcmqFwaw8Pjg4k6JBd/xylpn2wPKq7DloNDV1VieR6HjhAJGOGa+NzIaSGtehgwGAFkx13twkfnaNo5dJoydLE6gwGJtNfxvlSTSuPcNXFH0DWCIryZlXfdQ14ChWV5WIzW7ZQuh1biqWVx7db/StgfDXMRnAVdm0hdKlOj4eYUfyLL956ubd4cnzVLQmVUGzNZOUxzb1RKoOwxyVx7Gn33ITrv+27D/u6ByfaWH+ScGp9TdGL99Fvacbu8vxQ4qeC9KLeckdhVMzItNz2eVuPbqCyGKhNT2frINMizvObwR0HLFrAHJ69Q/Cng6GaRL5qqfrkv1inaT5DAsSnAU/mUBFEmHQcQW4B0AaY0ulX3GHOCaEHcaAN2mcgBjkW7+AVoPW7PUsMTdmYIMcYJzOEMEnKB2HRYxc3AudyQgPxn0l2jc4qlT0hLETl8b/jgfLREMsAHbAPf0O8EY0lyT2Z7PPwjwxr/tWFLYAXfgh5ySMr2PxNvoowUpTkw/pxekTbUUSYGdvIpTRJAXykXIAocZJDxgFurDn/bRqTh0uGJDwm6/gfSm4UuS3z5C2WpX+lfAXwtHUM=
